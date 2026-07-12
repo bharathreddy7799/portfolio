@@ -239,7 +239,9 @@
           Dynatrace</strong>) with APM, SLO/SLI instrumentation and alert routing; built end-to-end
           <strong>Azure DevOps YAML pipelines</strong> with canary rollouts and automated rollback;
           embedded <strong>shift-left DevSecOps gates</strong> (Fortify, SonarQube, Black Duck) into every
-          release; and delivered infrastructure as versioned code with Terraform, Bicep and ARM.
+          release; delivered infrastructure as versioned code with Terraform, Bicep and ARM; and built
+          <strong>Backstage IDP self-service workflows</strong> — a zero-ticket model that cut product and
+          customer onboarding from days to minutes.
         </p>
         <p>
           Before that, five years at <strong>NTT DATA</strong> onboarding enterprise clients onto Azure,
@@ -293,7 +295,7 @@
       <div class="skill-card">
         <h3>🚀 CI/CD & GitOps</h3>
         <div class="desc">Pipelines for containerized, serverless and VM workloads — with rollback built in.</div>
-        <div class="tags"><span class="tag">Azure DevOps (YAML)</span><span class="tag">GitHub Actions</span><span class="tag">Jenkins</span><span class="tag">GitLab CI</span><span class="tag">Bitbucket</span><span class="tag">GitOps</span></div>
+        <div class="tags"><span class="tag">Azure DevOps (YAML)</span><span class="tag">GitHub Actions</span><span class="tag">Jenkins</span><span class="tag">GitLab CI</span><span class="tag">Bitbucket</span><span class="tag">GitOps</span><span class="tag">Backstage (IDP)</span></div>
       </div>
       <div class="skill-card">
         <h3>🔐 DevSecOps</h3>
@@ -337,6 +339,7 @@
             <li>Automate infrastructure with Terraform, Bicep and ARM — AKS clusters, networking and identity delivered as version-controlled code.</li>
             <li>Embedded shift-left DevSecOps (Fortify, SonarQube, CodeDX, Black Duck, container scanning) into release pipelines as enforced security gates.</li>
             <li>Lead L2/L3 incident response and RCA — measurably improved MTTR and reduced repeat incidents through better instrumentation.</li>
+            <li>Built Backstage IDP self-service workflows — a zero-ticket onboarding model that cut product and customer onboarding from days of manual effort to minutes.</li>
           </ul>
         </div>
         <div class="entry">
@@ -436,6 +439,12 @@
         <div class="tags"><span class="tag">AKS</span><span class="tag">Autoscaling</span><span class="tag">DR / BCP</span></div>
       </div>
       <div class="project">
+        <div class="cat">Developer Experience</div>
+        <h3>Backstage IDP — Zero-Ticket Onboarding</h3>
+        <p>Self-service developer workflows on Backstage (Internal Developer Platform) — a zero-ticket approach that onboards products and customers seamlessly, turning days of manual work into minutes and boosting developer productivity.</p>
+        <div class="tags"><span class="tag">Backstage</span><span class="tag">IDP</span><span class="tag">Self-Service</span><span class="tag">Automation</span></div>
+      </div>
+      <div class="project">
         <div class="cat">FinOps</div>
         <h3>Cloud Cost & Performance Optimization</h3>
         <p>Right-sizing, autoscaling, storage lifecycle management and ephemeral build execution — reducing cloud spend while improving runtime performance.</p>
@@ -505,34 +514,4 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
     btn.classList.add('active');
     document.getElementById(btn.dataset.tab).classList.add('active');
-  });
-});
-
-// Reveal on scroll
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-// Animated counters
-let counted = false;
-const statsIO = new IntersectionObserver(entries => {
-  if (entries[0].isIntersecting && !counted) {
-    counted = true;
-    document.querySelectorAll('.count').forEach(el => {
-      const target = +el.dataset.target, dur = 1400, start = performance.now();
-      function tick(now) {
-        const p = Math.min((now - start) / dur, 1);
-        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
-        if (p < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    });
-  }
-}, { threshold: 0.4 });
-const statsEl = document.querySelector('.stats');
-if (statsEl) statsIO.observe(statsEl);
-</script>
-
-</body>
-</html>
+  })
