@@ -3,19 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bharath Reddy | Senior DevOps & DevSecOps Platform Engineer</title>
-<meta name="description" content="Bharath Reddy is a Senior DevOps / Platform Engineer specializing in multi-cloud (AWS, Azure, GCP), Kubernetes, Terraform/IaC, GitOps, CI/CD and DevSecOps automation.">
-<meta name="keywords" content="Bharath Reddy, DevOps Engineer, DevSecOps, Platform Engineer, CloudOps, AWS, Azure, GCP, Kubernetes, Terraform, GitOps, ArgoCD">
+<title>Bharath Kumar Reddy | Senior Platform Engineer — DevOps · SRE · Observability</title>
+<meta name="description" content="Bharath Kumar Reddy Pamireddy is a Senior Platform Engineer in Abu Dhabi with 8+ years across DevOps, SRE, Observability and DevSecOps — AKS, Azure, AWS, GCP, Terraform, Kubernetes, CI/CD.">
+<meta name="keywords" content="Bharath Kumar Reddy, Senior Platform Engineer, DevOps Engineer, SRE, Observability Engineer, DevSecOps, CloudOps, Azure, AKS, AWS, GCP, Kubernetes, Terraform, Prometheus, Grafana, Dynatrace, Abu Dhabi">
+<meta property="og:title" content="Bharath Kumar Reddy | Senior Platform Engineer">
+<meta property="og:description" content="Building reliable, observable, secure cloud platforms — 8+ years across Azure, AWS and GCP.">
+<meta property="og:type" content="website">
 <style>
+  /* ─── COLOR SYSTEM ──────────────────────────────────────────
+     Active: "Midnight Ops" — deep navy + emerald + cyan.
+     Recruiter-friendly: dark = technical credibility,
+     emerald = growth/action (buttons), cyan = links/accents.
+
+     Alternate palettes — replace the 4 accent vars to switch:
+     ① Corporate Slate : --green:#3b82f6; --blue:#93c5fd; (blue on slate — safest/enterprise)
+     ② Amber Terminal  : --green:#fbbf24; --blue:#fcd34d; (warm hacker vibe)
+     ③ Violet Platform : --green:#a78bfa; --blue:#67e8f9; (modern startup feel)
+  ──────────────────────────────────────────────────────────── */
   :root {
-    --bg: #0a0e14;
-    --bg-alt: #0e1420;
-    --card: #121a28;
-    --card-hover: #182234;
-    --border: #1f2c42;
-    --text: #e8eef6;
-    --muted: #8a97ab;
-    --green: #2dd4a7;
+    --bg: #0a0f1c;
+    --bg-alt: #0d1526;
+    --card: #111b30;
+    --card-hover: #16233d;
+    --border: #1e2d4a;
+    --text: #e9eef7;
+    --muted: #8b99b3;
+    --green: #10d9a3;
     --blue: #4cc2ff;
     --mono: 'SFMono-Regular', Consolas, 'Cascadia Code', Menlo, monospace;
   }
@@ -26,27 +39,31 @@
   .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
 
   /* ── Nav ─────────────────────────── */
-  nav { position: sticky; top: 0; z-index: 100; background: rgba(10,14,20,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(10,15,28,.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
   nav .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
   .logo { font-family: var(--mono); font-weight: 700; color: var(--green); font-size: 1.02rem; }
   nav ul { display: flex; gap: 26px; list-style: none; align-items: center; }
   nav ul a { color: var(--muted); font-size: .9rem; transition: color .2s; }
   nav ul a:hover { color: var(--green); }
   .resume-btn { padding: 8px 18px; border: 1px solid var(--green); border-radius: 6px; color: var(--green) !important; font-family: var(--mono); font-size: .82rem !important; }
-  .resume-btn:hover { background: rgba(45,212,167,.1); }
+  .resume-btn:hover { background: rgba(16,217,163,.1); }
 
   /* ── Hero ─────────────────────────── */
   header { min-height: calc(100vh - 64px); display: flex; flex-direction: column; justify-content: center; padding: 60px 0; position: relative; }
+  .avail { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: .78rem; color: var(--green); border: 1px solid var(--border); border-radius: 999px; padding: 6px 14px; margin-bottom: 22px; width: fit-content; }
+  .avail::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(16,217,163,.5);} 50% { box-shadow: 0 0 0 6px rgba(16,217,163,0);} }
   .prompt { font-family: var(--mono); color: var(--green); font-size: 1rem; margin-bottom: 14px; }
   .prompt::before { content: '$ '; color: var(--muted); }
-  h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 14px; }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1.1; margin-bottom: 14px; }
   .typed-line { font-family: var(--mono); font-size: clamp(1rem, 2.6vw, 1.35rem); color: var(--blue); min-height: 1.8em; margin-bottom: 22px; }
   .cursor { display: inline-block; width: 10px; background: var(--blue); animation: blink 1s step-end infinite; }
   @keyframes blink { 50% { opacity: 0; } }
-  .hero-desc { max-width: 620px; color: var(--muted); margin-bottom: 30px; font-size: 1.02rem; }
+  .hero-desc { max-width: 640px; color: var(--muted); margin-bottom: 30px; font-size: 1.02rem; }
+  .hero-desc strong { color: var(--text); }
   .btn-row { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 34px; }
   .btn { display: inline-block; padding: 13px 26px; border-radius: 8px; font-weight: 600; font-size: .95rem; transition: all .2s; }
-  .btn-primary { background: var(--green); color: #052e22; }
+  .btn-primary { background: var(--green); color: #04281d; }
   .btn-primary:hover { filter: brightness(1.12); transform: translateY(-2px); }
   .btn-ghost { border: 1px solid var(--border); color: var(--text); }
   .btn-ghost:hover { border-color: var(--green); transform: translateY(-2px); }
@@ -54,12 +71,11 @@
   .socials a { width: 42px; height: 42px; border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--muted); font-family: var(--mono); font-size: .8rem; font-weight: 700; transition: all .2s; }
   .socials a:hover { color: var(--green); border-color: var(--green); transform: translateY(-3px); }
 
-  /* terminal window */
-  .term { position: absolute; right: 24px; top: 50%; transform: translateY(-50%); width: 380px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+  .term { position: absolute; right: 24px; top: 50%; transform: translateY(-50%); width: 390px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
   .term-bar { background: var(--bg-alt); padding: 9px 14px; display: flex; gap: 7px; align-items: center; border-bottom: 1px solid var(--border); }
   .dot { width: 11px; height: 11px; border-radius: 50%; }
   .term-title { font-family: var(--mono); font-size: .72rem; color: var(--muted); margin-left: 8px; }
-  .term-body { padding: 16px; font-family: var(--mono); font-size: .76rem; line-height: 1.9; }
+  .term-body { padding: 16px; font-family: var(--mono); font-size: .75rem; line-height: 1.9; }
   .term-body .c { color: var(--muted); }
   .term-body .g { color: var(--green); }
   .term-body .b { color: var(--blue); }
@@ -74,7 +90,8 @@
   /* About */
   .about-grid { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: start; }
   .avatar-wrap { position: relative; }
-  .avatar { width: 100%; aspect-ratio: 1; border-radius: 14px; background: linear-gradient(135deg, var(--card), var(--bg-alt)); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; font-size: 4.5rem; font-weight: 700; color: var(--green); font-family: var(--mono); }
+  .avatar-img { width: 100%; aspect-ratio: 1; object-fit: cover; object-position: top; border-radius: 14px; border: 1px solid var(--border); display: block; }
+  .avatar-fallback { width: 100%; aspect-ratio: 1; border-radius: 14px; background: linear-gradient(135deg, var(--card), var(--bg-alt)); border: 1px solid var(--border); display: none; align-items: center; justify-content: center; font-size: 4.5rem; font-weight: 700; color: var(--green); font-family: var(--mono); }
   .avatar-badge { position: absolute; bottom: -14px; left: 50%; transform: translateX(-50%); background: var(--card); border: 1px solid var(--green); border-radius: 999px; padding: 7px 18px; font-size: .8rem; white-space: nowrap; font-family: var(--mono); color: var(--green); }
   .about-text p { color: var(--muted); margin-bottom: 16px; }
   .about-text strong { color: var(--text); }
@@ -87,7 +104,7 @@
   .skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
   .skill-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 26px; transition: all .25s; }
   .skill-card:hover { border-color: var(--green); transform: translateY(-4px); }
-  .skill-card h3 { font-size: 1.02rem; margin-bottom: 6px; color: var(--text); }
+  .skill-card h3 { font-size: 1.02rem; margin-bottom: 6px; }
   .skill-card .desc { color: var(--muted); font-size: .85rem; margin-bottom: 16px; }
   .tags { display: flex; flex-wrap: wrap; gap: 8px; }
   .tag { font-family: var(--mono); font-size: .74rem; padding: 5px 11px; background: rgba(76,194,255,.07); border: 1px solid var(--border); border-radius: 999px; color: var(--muted); }
@@ -95,7 +112,7 @@
   /* Journey tabs */
   .tabs { display: flex; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
   .tab-btn { padding: 10px 24px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--muted); font-size: .92rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: all .2s; }
-  .tab-btn.active { background: var(--green); color: #052e22; border-color: var(--green); }
+  .tab-btn.active { background: var(--green); color: #04281d; border-color: var(--green); }
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
   .timeline { position: relative; padding-left: 30px; }
@@ -135,7 +152,6 @@
 
   footer { border-top: 1px solid var(--border); padding: 30px 0; text-align: center; color: var(--muted); font-size: .8rem; font-family: var(--mono); }
 
-  /* Reveal on scroll */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s, transform .6s; }
   .reveal.visible { opacity: 1; transform: none; }
 
@@ -159,22 +175,23 @@
 </nav>
 
 <header class="container">
+  <div class="avail">Open to Senior Platform / SRE roles</div>
   <div class="prompt">whoami</div>
-  <h1>Bharath Reddy.</h1>
+  <h1>Bharath Kumar Reddy.</h1>
   <div class="typed-line"><span id="typed"></span><span class="cursor">&nbsp;</span></div>
   <p class="hero-desc">
-    I build secure, scalable multi-cloud platforms across AWS, Azure and GCP — driving
-    zero-downtime Kubernetes operations, GitOps automation, and self-service developer
-    platforms that cut manual effort and cloud costs alike.
+    I design and operate <strong>reliable, observable, secure cloud platforms</strong> — from AKS and
+    multi-cloud infrastructure to CI/CD, SRE and self-healing observability. 8+ years keeping
+    mission-critical workloads fast, safe and boring to run.
   </p>
   <div class="btn-row">
     <a class="btn btn-primary" href="#projects">View My Work</a>
     <a class="btn btn-ghost" href="Bharath_Resume.pdf" target="_blank">Download Resume</a>
   </div>
   <div class="socials">
-    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener" title="LinkedIn">in</a>
-    <a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener" title="GitHub">gh</a>
+    <a href="https://www.linkedin.com/in/bharathr-4a4868165/" target="_blank" rel="noopener" title="LinkedIn">in</a>
     <a href="mailto:pbkreddy7799@gmail.com" title="Email">@</a>
+    <a href="tel:+971502754631" title="Phone">☎</a>
   </div>
 
   <div class="term">
@@ -185,16 +202,16 @@
       <span class="term-title">bharath@platform-eng: ~</span>
     </div>
     <div class="term-body">
-      <div><span class="c">$</span> kubectl get nodes</div>
-      <div><span class="g">✔ all nodes Ready — 0 drift detected</span></div>
+      <div><span class="c">$</span> kubectl get nodes -A</div>
+      <div><span class="g">✔ AKS · all nodes Ready · multi-zone</span></div>
       <div><span class="c">$</span> terraform plan</div>
-      <div><span class="g">✔ no changes. infrastructure up-to-date</span></div>
-      <div><span class="c">$</span> argocd app list</div>
-      <div><span class="b">✔ 42 apps · Synced · Healthy</span></div>
-      <div><span class="c">$</span> trivy image app:latest</div>
-      <div><span class="g">✔ 0 CRITICAL, 0 HIGH</span></div>
-      <div><span class="c">$</span> uptime</div>
-      <div><span class="b">✔ 99.95% — pager silent 🎉</span></div>
+      <div><span class="g">✔ no changes — infra as code, zero drift</span></div>
+      <div><span class="c">$</span> az pipelines run --name release</div>
+      <div><span class="b">✔ canary 10% → 100% · rollback armed</span></div>
+      <div><span class="c">$</span> curl -s dynatrace/api/slo</div>
+      <div><span class="g">✔ SLOs green · error budget 94% left</span></div>
+      <div><span class="c">$</span> grep CRITICAL trivy-report.txt</div>
+      <div><span class="b">✔ 0 findings · gates passed</span></div>
     </div>
   </div>
 </header>
@@ -205,33 +222,35 @@
     <h2>Turning Infrastructure Into Reliable Systems</h2>
     <div class="about-grid">
       <div class="avatar-wrap">
-        <!-- EDIT: replace with <img src="images/your-photo.png" style="width:100%;border-radius:14px"> -->
-        <div class="avatar">BR</div>
+        <img class="avatar-img" src="images/profile.jpg" alt="Bharath Kumar Reddy Pamireddy"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="avatar-fallback">BR</div>
         <div class="avatar-badge">🚀 8+ yrs in Production</div>
       </div>
       <div class="about-text">
         <p>
-          Hey, I'm Bharath — a <strong>Senior DevOps / Platform Engineer</strong> building secure,
-          scalable platforms across <strong>AWS, Azure and GCP</strong>. My work centers on Kubernetes,
-          Infrastructure as Code, CI/CD automation, and improving developer productivity in
-          multi-cloud environments.
+          Hey, I'm Bharath — a <strong>Senior Platform Engineer (DevOps · SRE · Observability)</strong>
+          currently keeping mission-critical workloads reliable at <strong>ADNOC</strong> in Abu Dhabi.
+          I own the observability, performance and security of estates spanning AKS, Azure App Services,
+          serverless and VM-based infrastructure.
         </p>
         <p>
-          <!-- EDIT: swap in your real highlights -->
-          Recent highlights include zero-downtime EKS upgrades across production clusters, rolling
-          out ArgoCD GitOps for multi-cluster deployments, and building reusable Terraform modules
-          that cut cloud infrastructure costs by 40%. I've also built self-service developer
-          workflows achieving a "zero-ticket" access model.
+          Recent highlights: stood up the enterprise monitoring stack (<strong>Prometheus, Grafana,
+          Dynatrace</strong>) with APM, SLO/SLI instrumentation and alert routing; built end-to-end
+          <strong>Azure DevOps YAML pipelines</strong> with canary rollouts and automated rollback;
+          embedded <strong>shift-left DevSecOps gates</strong> (Fortify, SonarQube, Black Duck) into every
+          release; and delivered infrastructure as versioned code with Terraform, Bicep and ARM.
         </p>
         <p>
-          Lately I've been expanding into AI-assisted platform engineering — using automation and
-          intelligent workflows to improve observability, reduce MTTR, and cut manual operational
-          effort.
+          Before that, five years at <strong>NTT DATA</strong> onboarding enterprise clients onto Azure,
+          AWS and GCP — landing zones, Kubernetes platforms, CI/CD and HA/DR design. I write a lot of
+          Python, Bash and PowerShell: anything repetitive that can be removed from a team's day gets
+          automated.
         </p>
         <ul class="facts">
-          <li>Name <b>Bharath Reddy</b></li>
-          <li>Role <b>Senior DevOps / DevSecOps Engineer</b></li>
-          <li>Location <b>[City, Country]</b></li>
+          <li>Name <b>Bharath Kumar Reddy Pamireddy</b></li>
+          <li>Role <b>Senior Platform / DevOps & SRE Engineer</b></li>
+          <li>Location <b>Abu Dhabi, UAE</b></li>
           <li>Email <b>pbkreddy7799@gmail.com</b></li>
         </ul>
         <a class="btn btn-primary" href="#contact">Let's Work Together</a>
@@ -244,37 +263,52 @@
   <div class="container reveal">
     <div class="sec-num">02. Tech Stack</div>
     <h2>Tools I Use To Ship & Scale</h2>
-    <p class="lead">A toolkit built around cloud infrastructure, automation, security and reliable delivery.</p>
+    <p class="lead">A toolkit built around observability, automation, security and reliable multi-cloud delivery.</p>
     <div class="skill-grid">
       <div class="skill-card">
-        <h3>☁️ Multi-Cloud & IaC</h3>
-        <div class="desc">Provisioning and standardizing infrastructure across cloud providers.</div>
-        <div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">Terraform</span><span class="tag">CloudFormation</span><span class="tag">Ansible</span></div>
+        <h3>📊 Observability & Monitoring</h3>
+        <div class="desc">APM, log analytics, dashboards and alerting — as code, in version control.</div>
+        <div class="tags"><span class="tag">Dynatrace</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Azure Monitor</span><span class="tag">Log Analytics / KQL</span><span class="tag">CloudWatch</span><span class="tag">ELK</span><span class="tag">Zabbix</span></div>
+      </div>
+      <div class="skill-card">
+        <h3>🛡️ Site Reliability Engineering</h3>
+        <div class="desc">SLO/SLI design, incident response and keeping error budgets green.</div>
+        <div class="tags"><span class="tag">SLO / SLI</span><span class="tag">Capacity Planning</span><span class="tag">Incident Response</span><span class="tag">RCA</span><span class="tag">MTTR Optimization</span><span class="tag">Canary / Blue-Green</span><span class="tag">Resilience Testing</span></div>
+      </div>
+      <div class="skill-card">
+        <h3>☁️ Cloud Platforms</h3>
+        <div class="desc">Cloud-native, hybrid and on-premises — production experience on all three clouds.</div>
+        <div class="tags"><span class="tag">Azure (AKS · App Services · Functions)</span><span class="tag">AWS (EKS · EC2 · S3 · IAM)</span><span class="tag">GCP (GKE)</span><span class="tag">VMware vSphere</span><span class="tag">Hyper-V</span></div>
+      </div>
+      <div class="skill-card">
+        <h3>🏗️ Infrastructure as Code</h3>
+        <div class="desc">Version-controlled, repeatable infrastructure — including Observability-as-Code.</div>
+        <div class="tags"><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">Azure Bicep</span><span class="tag">ARM Templates</span><span class="tag">CloudFormation</span><span class="tag">Helm</span></div>
       </div>
       <div class="skill-card">
         <h3>🐳 Containers & Orchestration</h3>
-        <div class="desc">Kubernetes at scale — production-grade clusters and workloads.</div>
-        <div class="tags"><span class="tag">Kubernetes</span><span class="tag">EKS / AKS / GKE</span><span class="tag">Docker</span><span class="tag">Helm</span><span class="tag">Karpenter</span></div>
+        <div class="desc">Kubernetes across all three managed platforms, secured end to end.</div>
+        <div class="tags"><span class="tag">Kubernetes</span><span class="tag">AKS / EKS / GKE</span><span class="tag">Docker</span><span class="tag">Helm</span><span class="tag">Kustomize</span><span class="tag">OpenShift</span><span class="tag">ACR / ECR</span></div>
       </div>
       <div class="skill-card">
         <h3>🚀 CI/CD & GitOps</h3>
-        <div class="desc">Pipelines and GitOps workflows that make deployments boring.</div>
-        <div class="tags"><span class="tag">GitHub Actions</span><span class="tag">ArgoCD</span><span class="tag">Jenkins</span><span class="tag">GitLab CI</span><span class="tag">Harness</span></div>
+        <div class="desc">Pipelines for containerized, serverless and VM workloads — with rollback built in.</div>
+        <div class="tags"><span class="tag">Azure DevOps (YAML)</span><span class="tag">GitHub Actions</span><span class="tag">Jenkins</span><span class="tag">GitLab CI</span><span class="tag">Bitbucket</span><span class="tag">GitOps</span></div>
       </div>
       <div class="skill-card">
         <h3>🔐 DevSecOps</h3>
-        <div class="desc">Shift-left security, policy-as-code and supply-chain protection.</div>
-        <div class="tags"><span class="tag">Vault</span><span class="tag">Trivy</span><span class="tag">Snyk</span><span class="tag">OPA / Kyverno</span><span class="tag">SAST / DAST</span></div>
+        <div class="desc">Shift-left security gates, secrets management and Zero Trust identity.</div>
+        <div class="tags"><span class="tag">Fortify SAST/DAST</span><span class="tag">SonarQube</span><span class="tag">Black Duck SCA</span><span class="tag">CodeDX</span><span class="tag">Key Vault / KMS</span><span class="tag">Entra ID · RBAC</span><span class="tag">Zero Trust</span></div>
       </div>
       <div class="skill-card">
-        <h3>📊 Observability & SRE</h3>
-        <div class="desc">Monitoring, alerting and SLO-driven reliability practices.</div>
-        <div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Datadog</span><span class="tag">ELK</span><span class="tag">PagerDuty</span></div>
+        <h3>💻 Scripting & Automation</h3>
+        <div class="desc">If it's repetitive, it gets automated — usually with an API call.</div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">PowerShell</span><span class="tag">REST APIs</span><span class="tag">Azure CLI</span><span class="tag">AWS CLI</span><span class="tag">ServiceNow Integration</span></div>
       </div>
       <div class="skill-card">
-        <h3>💻 Platform & Languages</h3>
-        <div class="desc">Self-service developer platforms plus the scripting that powers them.</div>
-        <div class="tags"><span class="tag">Backstage (IDP)</span><span class="tag">Python</span><span class="tag">Go</span><span class="tag">Bash</span><span class="tag">Velero (DR)</span></div>
+        <h3>🖥️ OS & Networking</h3>
+        <div class="desc">Strong administration across Linux and Windows estates.</div>
+        <div class="tags"><span class="tag">RHEL / Ubuntu</span><span class="tag">Windows Server</span><span class="tag">Active Directory</span><span class="tag">TCP/IP · DNS</span><span class="tag">VPN · IPSec</span><span class="tag">Load Balancing</span></div>
       </div>
     </div>
   </div>
@@ -292,35 +326,46 @@
 
     <div class="tab-panel active" id="exp">
       <div class="timeline">
-        <!-- EDIT: replace with your real roles -->
         <div class="entry">
-          <div class="period">2023 — Present</div>
-          <h3>Senior DevOps / Platform Engineer</h3>
-          <h4>[Company Name] — [Location]</h4>
+          <div class="period">May 2025 — Present</div>
+          <h3>DevOps & Observability Engineer</h3>
+          <h4>ADNOC — Abu Dhabi National Oil Company, Abu Dhabi</h4>
           <ul>
-            <li>Built a self-service internal developer platform on Kubernetes, cutting environment provisioning from days to under 30 minutes.</li>
-            <li>Led GitOps migration with ArgoCD + Terraform — 60% faster, fully auditable deployments across 40+ microservices.</li>
-            <li>Implemented policy-as-code and automated image scanning, reducing critical production vulnerabilities by 85%.</li>
-            <li>Drove FinOps rightsizing and spot adoption, cutting monthly cloud spend by 40%.</li>
+            <li>Own observability and reliability of enterprise workloads on AKS, Azure App Services, Functions, IaaS and on-premise — dashboards, alerts and SLO/SLI instrumentation across the stack.</li>
+            <li>Stood up the monitoring stack (Prometheus, Grafana, Dynatrace) for production and pre-production estates, with APM, log analytics and alert routing to incident channels.</li>
+            <li>Design and run end-to-end Azure DevOps YAML pipelines with canary-style rollouts and automated rollback for problem releases.</li>
+            <li>Automate infrastructure with Terraform, Bicep and ARM — AKS clusters, networking and identity delivered as version-controlled code.</li>
+            <li>Embedded shift-left DevSecOps (Fortify, SonarQube, CodeDX, Black Duck, container scanning) into release pipelines as enforced security gates.</li>
+            <li>Lead L2/L3 incident response and RCA — measurably improved MTTR and reduced repeat incidents through better instrumentation.</li>
           </ul>
         </div>
         <div class="entry">
-          <div class="period">2020 — 2023</div>
-          <h3>DevOps / CloudOps Engineer</h3>
-          <h4>[Company Name] — [Location]</h4>
+          <div class="period">Oct 2020 — May 2025</div>
+          <h3>DevOps & Cloud Engineer</h3>
+          <h4>NTT DATA</h4>
           <ul>
-            <li>Standardized CI/CD org-wide (Jenkins → GitHub Actions) with reusable workflows for 15 teams.</li>
-            <li>Designed multi-account AWS landing zone with Terraform modules, SSO and centralized guardrails.</li>
-            <li>Established observability stack and on-call practices; improved MTTR by 50%.</li>
+            <li>Onboarded enterprise clients onto Azure, AWS and GCP — secure landing zones, VPN/Interconnect, IAM hierarchies and resource baselines.</li>
+            <li>Built and maintained CI/CD across Azure DevOps, Jenkins, GitLab CI and GitHub Actions for microservices, containers and serverless.</li>
+            <li>Ran containerized platforms on AKS, EKS and GKE with Docker, Kubernetes and Helm — improving deployment efficiency and reliability.</li>
+            <li>Authored reusable Terraform modules and ARM templates, cutting provisioning time substantially across customer projects.</li>
+            <li>Designed HA, DR and BCP solutions including multi-region failover; enforced security and compliance baselines through audits and remediation.</li>
           </ul>
         </div>
         <div class="entry">
-          <div class="period">2018 — 2020</div>
-          <h3>Systems / Build & Release Engineer</h3>
-          <h4>[Company Name] — [Location]</h4>
+          <div class="period">Dec 2019 — Jul 2020</div>
+          <h3>Systems Engineer</h3>
+          <h4>KPMG</h4>
           <ul>
-            <li>Containerized legacy applications and migrated them to Kubernetes.</li>
-            <li>Replaced manual provisioning with Ansible playbooks and Python automation.</li>
+            <li>Managed VMware vSphere/ESXi infrastructure — provisioning, snapshots, migrations and capacity planning.</li>
+            <li>Supported on-premise VMware to Azure cloud migrations and hybrid integration; administered Windows Server and Active Directory.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="period">Apr 2018 — Sep 2019</div>
+          <h3>Systems Engineer</h3>
+          <h4>Suzlon Energy Ltd</h4>
+          <ul>
+            <li>L1/L2 infrastructure and application support — monitoring, incident resolution and access management across Windows and Linux.</li>
           </ul>
         </div>
       </div>
@@ -328,29 +373,27 @@
 
     <div class="tab-panel" id="edu">
       <div class="timeline">
-        <!-- EDIT: your education -->
         <div class="entry">
-          <div class="period">[Years]</div>
-          <h3>Bachelor of Technology, [Branch]</h3>
-          <h4>[College / University Name]</h4>
-          <p>[One line about your degree, specialization, or achievements.]</p>
-        </div>
-        <div class="entry">
-          <div class="period">[Years]</div>
-          <h3>Intermediate / 12th</h3>
-          <h4>[School / College Name]</h4>
-          <p>[Board and stream.]</p>
+          <div class="period">Master's Degree</div>
+          <h3>MBA — Master of Business Administration</h3>
+          <h4>Acharya Nagarjuna University</h4>
+          <p>Business administration foundation complementing deep technical practice — useful for cost optimization, stakeholder management and platform strategy.</p>
         </div>
       </div>
     </div>
 
     <div class="tab-panel" id="cert">
       <div class="timeline">
-        <!-- EDIT: keep only certs you hold -->
-        <div class="entry"><div class="period">CNCF</div><h3>CKA — Certified Kubernetes Administrator</h3><p>Kubernetes cluster administration at production scale.</p></div>
-        <div class="entry"><div class="period">CNCF</div><h3>CKS — Certified Kubernetes Security Specialist</h3><p>Securing container-based applications and Kubernetes platforms.</p></div>
-        <div class="entry"><div class="period">AWS</div><h3>AWS DevOps Engineer — Professional</h3><p>CI/CD, IaC, monitoring and governance on AWS.</p></div>
-        <div class="entry"><div class="period">HashiCorp</div><h3>Terraform Associate</h3><p>Infrastructure as Code fundamentals and workflows.</p></div>
+        <div class="entry">
+          <div class="period">Microsoft</div>
+          <h3>Microsoft Certified: DevOps Engineer Expert</h3>
+          <p>Expert-level certification covering CI/CD design, IaC, security, compliance and monitoring on Azure.</p>
+        </div>
+        <div class="entry">
+          <div class="period">Microsoft</div>
+          <h3>Microsoft Certified: Azure Administrator Associate</h3>
+          <p>Core Azure administration — compute, networking, storage, identity and governance.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -359,40 +402,52 @@
 <section id="projects">
   <div class="container reveal">
     <div class="sec-num">04. Portfolio</div>
-    <h2>Check Out Some Of My Projects</h2>
-    <p class="lead">Platform and automation work that moved the needle on speed, security and cost.</p>
+    <h2>Work That Moved The Needle</h2>
+    <p class="lead">Platform, observability and automation work across energy, consulting and enterprise IT.</p>
     <div class="project-grid">
       <div class="project">
-        <div class="cat">Platform Engineering</div>
-        <h3>Internal Developer Platform</h3>
-        <p>Self-service golden-path platform: teams spin up a fully wired service — repo, pipeline, K8s deployment, monitoring — in minutes. Built with Backstage, Terraform and ArgoCD.</p>
-        <div class="tags"><span class="tag">Backstage</span><span class="tag">ArgoCD</span><span class="tag">Terraform</span></div>
+        <div class="cat">Observability / SRE</div>
+        <h3>Enterprise Observability Platform</h3>
+        <p>Stood up Prometheus, Grafana and Dynatrace across production and pre-production estates — APM instrumentation, SLO/SLI dashboards, log analytics and alert routing into incident channels. Improved MTTR and cut repeat incidents.</p>
+        <div class="tags"><span class="tag">Dynatrace</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">KQL</span></div>
       </div>
       <div class="project">
-        <div class="cat">DevSecOps</div>
-        <h3>Zero-Touch Secure Pipeline</h3>
-        <p>End-to-end secure delivery: SAST, dependency & container scanning, signed images, policy gates and SBOM generation — zero manual security reviews for standard changes.</p>
-        <div class="tags"><span class="tag">GitHub Actions</span><span class="tag">Trivy</span><span class="tag">OPA</span></div>
+        <div class="cat">Platform Engineering</div>
+        <h3>Observability-as-Code</h3>
+        <p>Instrumentation, dashboards and alert definitions kept in version control alongside application code — with Python/REST automation syncing alerts and integrating monitoring platforms with ServiceNow.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">REST APIs</span><span class="tag">ServiceNow</span><span class="tag">Git</span></div>
+      </div>
+      <div class="project">
+        <div class="cat">CI/CD & DevSecOps</div>
+        <h3>Secure Canary Release Pipelines</h3>
+        <p>End-to-end Azure DevOps YAML pipelines for containerized, serverless and VM workloads — canary rollouts, automated rollback, and enforced security gates with Fortify, SonarQube and Black Duck.</p>
+        <div class="tags"><span class="tag">Azure DevOps</span><span class="tag">Fortify</span><span class="tag">SonarQube</span><span class="tag">Black Duck</span></div>
       </div>
       <div class="project">
         <div class="cat">Cloud Architecture</div>
-        <h3>Multi-Account AWS Landing Zone</h3>
-        <p>Terraform-driven landing zone with account vending, SCP guardrails, centralized identity, hub-and-spoke networking and enforced cost allocation tagging.</p>
-        <div class="tags"><span class="tag">Terraform</span><span class="tag">AWS Organizations</span><span class="tag">FinOps</span></div>
+        <h3>Multi-Cloud Landing Zones</h3>
+        <p>Onboarded enterprise clients onto Azure, AWS and GCP — secure landing zones, IAM hierarchies, connectivity and reusable Terraform/ARM building blocks that cut provisioning time substantially.</p>
+        <div class="tags"><span class="tag">Terraform</span><span class="tag">Azure</span><span class="tag">AWS</span><span class="tag">GCP</span></div>
       </div>
       <div class="project">
-        <div class="cat">SRE / Observability</div>
-        <h3>SLO-Based Observability Stack</h3>
-        <p>Unified metrics, logs and traces with burn-rate alerting — cut pages by 70% while catching real incidents faster.</p>
-        <div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span></div>
+        <div class="cat">Reliability</div>
+        <h3>HA / DR for AKS & Azure Workloads</h3>
+        <p>Multi-zone deployments, pod and cluster autoscaling, and disaster recovery with tested backup and failover procedures — plus multi-region failover designs for enterprise clients.</p>
+        <div class="tags"><span class="tag">AKS</span><span class="tag">Autoscaling</span><span class="tag">DR / BCP</span></div>
+      </div>
+      <div class="project">
+        <div class="cat">FinOps</div>
+        <h3>Cloud Cost & Performance Optimization</h3>
+        <p>Right-sizing, autoscaling, storage lifecycle management and ephemeral build execution — reducing cloud spend while improving runtime performance.</p>
+        <div class="tags"><span class="tag">Right-sizing</span><span class="tag">Autoscaling</span><span class="tag">Cost Governance</span></div>
       </div>
     </div>
 
     <div class="stats">
-      <div class="stat"><div class="num"><span class="count" data-target="8">0</span><small>+</small></div><div class="label">Years in DevOps</div></div>
-      <div class="stat"><div class="num"><span class="count" data-target="40">0</span><small>%</small></div><div class="label">Cloud Cost Reduction</div></div>
-      <div class="stat"><div class="num"><span class="count" data-target="80">0</span><small>%</small></div><div class="label">Manual Effort Reduced</div></div>
-      <div class="stat"><div class="num"><span class="count" data-target="99">0</span><small>.95%</small></div><div class="label">Uptime Maintained</div></div>
+      <div class="stat"><div class="num"><span class="count" data-target="8">0</span><small>+</small></div><div class="label">Years in DevOps & SRE</div></div>
+      <div class="stat"><div class="num"><span class="count" data-target="3">0</span></div><div class="label">Cloud Platforms in Production</div></div>
+      <div class="stat"><div class="num"><span class="count" data-target="2">0</span></div><div class="label">Microsoft Certifications</div></div>
+      <div class="stat"><div class="num"><span class="count" data-target="4">0</span></div><div class="label">Industries Served</div></div>
     </div>
   </div>
 </section>
@@ -401,30 +456,32 @@
   <div class="container reveal">
     <div class="sec-num">05. Contact</div>
     <h2>I'd Love To Hear From You</h2>
-    <p class="lead">Feel free to reach out — for opportunities, collaborations, or just to talk shop about cloud and platforms.</p>
+    <p class="lead">Open to senior platform, DevOps and SRE opportunities — reach out for roles, collaborations, or just to talk shop.</p>
     <div class="contact-grid">
-      <div class="contact-card"><h5>Where to find me</h5><div class="val">[City]<br>[Country]</div></div>
+      <div class="contact-card"><h5>Where to find me</h5><div class="val">Abu Dhabi<br>United Arab Emirates</div></div>
       <div class="contact-card"><h5>Email me at</h5><div class="val"><a href="mailto:pbkreddy7799@gmail.com">pbkreddy7799@gmail.com</a></div></div>
-      <div class="contact-card"><h5>LinkedIn</h5><div class="val"><a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noopener">linkedin.com/in/YOUR-LINKEDIN</a></div></div>
-      <div class="contact-card"><h5>GitHub</h5><div class="val"><a href="https://github.com/YOUR-GITHUB" target="_blank" rel="noopener">github.com/YOUR-GITHUB</a></div></div>
+      <div class="contact-card"><h5>Call / WhatsApp</h5><div class="val"><a href="tel:+971502754631">+971 50 275 4631</a></div></div>
+      <div class="contact-card"><h5>LinkedIn</h5><div class="val"><a href="https://www.linkedin.com/in/bharathr-4a4868165/" target="_blank" rel="noopener">linkedin.com/in/bharathr</a></div></div>
     </div>
     <div class="contact-cta">
       <a class="btn btn-primary" href="mailto:pbkreddy7799@gmail.com">📧 Send Me An Email</a>
+      <a class="btn btn-ghost" href="Bharath_Resume.pdf" target="_blank" style="margin-left:12px">Download Resume</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container">© 2026 Bharath Reddy. Designed & built with care.</div>
+  <div class="container">© 2026 Bharath Kumar Reddy Pamireddy. Designed & built with care.</div>
 </footer>
 
 <script>
 // Typing effect
 const phrases = [
-  'Senior DevOps Engineer',
-  'Platform Engineer',
-  'DevSecOps · CloudOps',
-  'Kubernetes · Terraform · GitOps'
+  'Senior Platform Engineer',
+  'DevOps · SRE · Observability',
+  'Azure · AWS · GCP',
+  'Kubernetes · Terraform · CI/CD',
+  'DevSecOps · Zero Trust'
 ];
 const typedEl = document.getElementById('typed');
 let pi = 0, ci = 0, deleting = false;
