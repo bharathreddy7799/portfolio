@@ -570,4 +570,30 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 
 // Reveal on scroll
 const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.t
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Animated counters
+let counted = false;
+const statsIO = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting && !counted) {
+    counted = true;
+    document.querySelectorAll('.count').forEach(el => {
+      const target = +el.dataset.target, dur = 1400, start = performance.now();
+      function tick(now) {
+        const p = Math.min((now - start) / dur, 1);
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+}, { threshold: 0.4 });
+const statsEl = document.querySelector('.stats');
+if (statsEl) statsIO.observe(statsEl);
+</script>
+
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+</body>
+</html>
